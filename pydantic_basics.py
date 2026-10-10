@@ -18,3 +18,11 @@ from pydantic import BaseModel
 class patient(BaseModel) :
    name : str
    age : int
+def patient_info(patient:Patient):
+   print(patient.name)
+   print(patient.age)
+   print("Inserted")
+
+patient_details = {'name':'Prem','age':19}
+
+p1 = Patient(**patient_details)
